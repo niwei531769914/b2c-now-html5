@@ -1,0 +1,12 @@
+{
+  "name": "haitao-b2c-h5",
+  "private": true,
+  "dependencies": {
+    "requirejs": "~2.1.15",
+    "moment": "~2.8.4",
+    "momentjs": "~2.8.4",
+    "fastclick": "~1.0.3",
+    "text": "~2.0.14",
+    "zeptojs": "~1.1.6"
+  }
+}

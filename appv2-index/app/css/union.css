@@ -1,0 +1,35 @@
+
+.union_bj{ background:#f0f0f0; margin-top: .2rem}
+
+.union_coupon{ width: 94%; height: auto; display: block; float: left; background: #ffffff; padding: .2rem 3%}
+.union_coupon .union_coupon_car{ width: 2rem; height: 2rem; background: #ffffff; display: block; float: left}
+.union_coupon .union_coupon_car img{ width: 2rem; height: 2rem}
+
+.union_coupon .union_coupon_title{ font-size: .28rem; width: calc(100% - 2.4rem);   height: 2rem ;padding-left: .2rem; float: left}
+.union_coupon .union_coupon_title span{ width: 100%; height: auto; display: block}
+
+.union_coupon .union_coupon_title .coupon_title_name{ color: #323232; height: .4rem; line-height: .4rem; overflow: hidden}
+.union_coupon .union_coupon_title .coupon_title_fuwu{ color: #323232; height: .62rem; line-height: .32rem; margin: .08rem 0; overflow: hidden}
+.union_coupon .union_coupon_title .coupon_title_carname{ color: #828282; height: .4rem; line-height: .4rem; overflow: hidden}
+.union_coupon .union_coupon_title .coupon_title_val{ color: #ff0000; text-align: right; height: .4rem; line-height: .4rem; overflow: hidden}
+
+.union{ width: 94%; height: auto; display: block; float: left; padding: 0 3%; background: #ffffff; margin-top: .2rem}
+.union .union_integral, .union .union_card, .union .union_ph{ width: 100%; height: .94rem; display: block; float: left; border-bottom: 1px solid #e1e1e1}
+
+.union .union_integral{ font-size: .3rem; line-height: .94rem}
+.union .union_integral .union_integral_val{ color: #ff0000; padding: 0 .14rem}
+
+.union .union_card{ font-size: .28rem }
+.union .union_card input{ width: calc( 100% - 2.7rem); height: .94rem; padding-left: .5rem; background: url(../images/card.png) no-repeat left ; background-size: .4rem .27rem}
+.union .union_card .union_card_fc{ width: 1.5rem; height: .7rem; background: #f5174b; border-radius: 4px; color: #ffffff; display: block; float: right; text-align: center; line-height: .7rem; margin-top: .12rem }
+
+.union .union_ph { font-size: .28rem; }
+.union .union_ph input{ width: calc( 100% - 4rem); height: .94rem; background: url(../images/message.png) no-repeat left ; background-size: .27rem .36rem ; float: left; padding: 0 .5rem}
+.union .union_ph .union_ph_mes{ font-size: .28rem; color: #f5174b; float: right; line-height:.94rem; background: #ffffff; padding: 0 }
+
+.union .union_exchange{ width: 100% ; height: 1rem; line-height: 1rem; color: #999999; font-size: .3rem; background: #ffffff; display: block; float: left; text-align: center}
+
+.footer{ width: 100%; height: 1rem; background: #f5174b; text-align: center; line-height: 1rem; font-size: .3rem; position: absolute; bottom: 0}
+.footer a{ color: #ffffff}
+
+

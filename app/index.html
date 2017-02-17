@@ -1,0 +1,169 @@
+<!doctype html>
+<html manifest="app.manifest">
+<head>
+<meta charset="utf-8">
+<title>汇银乐虎全球家|汇集全球海外进口商品，进口食品，进口零食，进口母婴，进口美妆，海外原产地直采。</title>
+<meta name="description" content="汇银乐虎全球家（www.lehumall.com）汇集全球进口商品、进口零食、进口母婴，进口美妆，买进口商品，何须海外代购。">
+<meta name="Keywords" content="进口商品,进口食品,进口零食,汇银乐虎,汇银乐虎全球家,乐虎,汇银乐虎,扬州电商,扬州O2O,扬州B2C,扬州B2B2C，江苏汇银电子商务有限公司,智慧社区">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no,email=no">
+
+<!--zepto框架-->
+<script src="js/zepto.min.js"></script>
+<script src="js/base.js"></script>
+
+<script>
+$(document).ready(function(e) {
+	
+    if (localStorage.html01) { 
+	$("#ajax_banner").empty().append(localStorage.html01);
+	} 
+
+	if (localStorage.html02) { 
+		$("#ajax_fastList").empty().append(localStorage.html02);
+	} 
+	
+	if (localStorage.html03) { 
+		$("#ajax_hotRecommendation").empty().append(localStorage.html03);
+	} 
+});
+</script>
+
+<link href="css/global_m.css" rel="stylesheet">
+<link href="css/layout_2015.css" rel="stylesheet">
+<link href="images/Shortcut_114_114.png" rel="apple-touch-icon-precomposed">
+<link href="images/Shortcut_114_114.png" rel="Shortcut Icon" type="image/x-icon">
+<link rel="stylesheet" href="css/plus/swiper.min.css">
+</head>
+
+<body>
+
+<div class="nwrapper">
+<div class="ajax_noload"><img src="images/wifi.png">网络请求失败，请稍候再试<span><img src="images/sx.png"></span></div>
+
+    <!--顶部-->
+    <div class="nheader">
+    <div class="nheader_cover"></div>
+        <div class="nindex_shaomiao" onClick="scan_code_fun()"></div>
+        <div class="nindex_sousuo" onClick="search_fun()" unselectable="on" style="-moz-user-select:none;-webkit-user-select:none;" onselectstart="return false;"><em></em>全球购，找到好口碑</div>
+        <div class="nindex_xiaoxi" onClick="message_fun()"></div>
+    </div>
+    <!--/顶部-->
+    
+    <!--banner-->
+    <div class="nbanner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="ajax_banner">
+<!-- <div class="swiper-slide"><img class="lazyload" src="http://lehumall.b0.upaiyun.com//upload/image/admin/2016/20160727/201607271418305589.jpg"></div>
+-->           
+              
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!--/banner-->
+    
+    <!--标签-->
+    <div class="ntag" id="ajax_fastList">
+    <!--<a href="javascript:;"><img class="lazyload" src="http://lehumall.b0.upaiyun.com//upload/image/admin/2016/20160715/201607151122557492.png"><span>摇一摇</span></a>
+    
+    <a href="javascript:;"><img class="lazyload" src="http://lehumall.b0.upaiyun.com//upload/image/admin/2016/20160715/201607151125277.png"><span>免费试用</span></a>
+    
+    <a href="javascript:;" ><img class="lazyload" src="http://lehumall.b0.upaiyun.com//upload/image/admin/2016/20160715/201607151123534503.png"><span>每日签到</span></a>
+    
+
+    
+    <a href="javascript:;"><img class="lazyload" src="http://lehumall.b0.upaiyun.com//upload/image/admin/2016/20160715/201607151124127898.png"><span>更多</span></a>-->
+    
+    </div>
+    <!--/标签-->
+    
+    <div class="nhr nmiaosha_nhr" ></div>
+    
+    <!--秒杀-->
+    <div class="nmiaosha" >     
+        <div class="nmiaosha_top">
+            <img src="images/index_28.png" >&nbsp;<b class="ajax_timetext">距离开始</b><span class="getting-started"><em>00</em>:<em>00</em>:<em>00</em></span>&nbsp;<i class="ajax_REMARK"></i>
+            <a href="javascript:;" data-title="nmiaosha_more" data-url="">更多>></a></div>
+        <div class="nmiaosha_main" id="ajax_seckillList">
+        	<!--<a href="">
+                <img class="lazyload" src="images/list_mr.jpg">
+                <title>花印清新净颜卸妆水(滋养型)</title>
+                <span>￥00.00</span>
+        	</a>
+            <a href="">
+                <img class="lazyload" src="images/list_mr.jpg">
+                <title>花印清新净颜卸妆水(滋养型)</title>
+                <span>￥00.00</span>
+        	</a>
+            <a href="">
+                <img class="lazyload" src="images/list_mr.jpg">
+                <title>花印清新净颜卸妆水(滋养型)</title>
+                <span>￥00.00</span>
+        	</a>
+            <a href="">
+                <img class="lazyload" src="images/list_mr.jpg">
+                <title>花印清新净颜卸妆水(滋养型)</title>
+                <span>￥00.00</span>
+        	</a>
+            <a href="">
+                <img class="lazyload" src="images/list_mr.jpg">
+                <title>花印清新净颜卸妆水(滋养型)</title>
+                <span>￥00.00</span>
+        	</a>
+            <a href="">
+                <img class="lazyload" src="images/list_mr.jpg">
+                <title>花印清新净颜卸妆水(滋养型)</title>
+                <span>￥00.00</span>
+        	</a>-->
+        </div>
+    </div>
+    <!--/秒杀-->
+    
+    <div class="nhr"></div>
+    
+    <!--广告位-->
+    <div class="nindex_ad" id="ajax_hotRecommendation">
+    
+    	<!--<div class="nindex_ad_one"><a href="javascript:;" ><img class="lazyload" src="http://lehumall.b0.upaiyun.com//upload/image/admin/2016/20160718/201607181401206306.jpg"></a></div>
+    	<div class="nindex_ad_one"><a href="javascript:;" ><img class="lazyload" src="http://lehumall.b0.upaiyun.com//upload/image/admin/2016/20160722/201607221103424050.jpg"></a></div>
+        <div class="nindex_ad_one"><a href="javascript:;" ><img class="lazyload" src="http://lehumall.b0.upaiyun.com//upload/image/admin/2016/20160726/201607261829192675.jpg"></a></div>-->
+
+    </div>
+    <!--/广告位-->
+    <div class="nhr"></div>
+    
+    <!--分类楼层-->
+    <div id="ajax_prommotionLayout">
+    </div>
+    
+    <!--发现-->
+    <div class="nfaxian">
+     <div class="ajax_nfaxian_top"></div>
+        
+        <div class="nfaxian_main" id="ajax_showList"> 
+        </div>
+    </div>
+    <!--/发现-->
+
+</div>
+
+<a href="#" class="fix_go_top" onclick="return false;"></a>
+
+<!--插件-->
+<script src="js/plus/zepto.picLazyLoad.min.js"></script>
+
+<script src="js/plus/fx.js"></script>
+<script src="js/plus/swiper.jquery.min.js"></script>
+<script src="js/plus/ajax.js"></script>
+
+<!--数据-->
+
+<script src="js/huiyin/common/url.js"></script>
+<script src="js/native.js"></script>
+<script src="js/huiyin/http/index.js"></script>
+</body>
+</html>

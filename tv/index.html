@@ -1,0 +1,240 @@
+<!doctype html>
+<html manifest="app.manifest">
+<head>
+<meta charset="utf-8">
+<title>汇银乐虎全球家|汇集全球海外进口商品，进口食品，进口零食，进口母婴，进口美妆，海外原产地直采。</title>
+<meta name="description" content="汇银乐虎全球家（www.lehumall.com）汇集全球进口商品、进口零食、进口母婴，进口美妆，买进口商品，何须海外代购。">
+<meta name="Keywords" content="进口商品,进口食品,进口零食,汇银乐虎,汇银乐虎全球家,乐虎,汇银乐虎,扬州电商,扬州O2O,扬州B2C,扬州B2B2C，江苏汇银电子商务有限公司,智慧社区">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no,email=no">
+<link href="css/global_m.css" rel="stylesheet">
+<link href="css/layout_2015_2.css" rel="stylesheet">
+<link rel="stylesheet" href="css/plus/swiper.min.css">
+</head>
+
+<body>
+<div class="nwrapper nindex">
+
+<div class="nindex_top">
+
+    <div id="pDate" class="pDate"></div>
+    <script type="text/javascript">
+        var sWeek = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+        var dNow = new Date();
+        var CalendarData = new Array(100);
+        var madd = new Array(12);
+        var tgString = "甲乙丙丁戊己庚辛壬癸";
+        var dzString = "子丑寅卯辰巳午未申酉戌亥";
+        var numString = "一二三四五六七八九十";
+        var monString = "正二三四五六七八九十冬腊";
+        var weekString = "日一二三四五六";
+        var sx = "鼠牛虎兔龙蛇马羊猴鸡狗猪";
+        var cYear, cMonth, cDay, TheDate;
+        CalendarData = new Array(0xA4B, 0x5164B, 0x6A5, 0x6D4, 0x415B5, 0x2B6,
+                0x957, 0x2092F, 0x497, 0x60C96, 0xD4A, 0xEA5, 0x50DA9, 0x5AD,
+                0x2B6, 0x3126E, 0x92E, 0x7192D, 0xC95, 0xD4A, 0x61B4A, 0xB55,
+                0x56A, 0x4155B, 0x25D, 0x92D, 0x2192B, 0xA95, 0x71695, 0x6CA,
+                0xB55, 0x50AB5, 0x4DA, 0xA5B, 0x30A57, 0x52B, 0x8152A, 0xE95,
+                0x6AA, 0x615AA, 0xAB5, 0x4B6, 0x414AE, 0xA57, 0x526, 0x31D26,
+                0xD95, 0x70B55, 0x56A, 0x96D, 0x5095D, 0x4AD, 0xA4D, 0x41A4D,
+                0xD25, 0x81AA5, 0xB54, 0xB6A, 0x612DA, 0x95B, 0x49B, 0x41497,
+                0xA4B, 0xA164B, 0x6A5, 0x6D4, 0x615B4, 0xAB6, 0x957, 0x5092F,
+                0x497, 0x64B, 0x30D4A, 0xEA5, 0x80D65, 0x5AC, 0xAB6, 0x5126D,
+                0x92E, 0xC96, 0x41A95, 0xD4A, 0xDA5, 0x20B55, 0x56A, 0x7155B,
+                0x25D, 0x92D, 0x5192B, 0xA95, 0xB4A, 0x416AA, 0xAD5, 0x90AB5,
+                0x4BA, 0xA5B, 0x60A57, 0x52B, 0xA93, 0x40E95);
+        madd[0] = 0;
+        madd[1] = 31;
+        madd[2] = 59;
+        madd[3] = 90;
+        madd[4] = 120;
+        madd[5] = 151;
+        madd[6] = 181;
+        madd[7] = 212;
+        madd[8] = 243;
+        madd[9] = 273;
+        madd[10] = 304;
+        madd[11] = 334;
+        function GetBit(m, n) {
+            return (m >> n) & 1;
+        }
+        function e2c() {
+            TheDate = (arguments.length != 3) ? new Date() : new Date(arguments[0],arguments[1],arguments[2]);
+            var total, m, n, k;
+            var isEnd = false;
+            var tmp = TheDate.getFullYear();
+            total = (tmp - 1921) * 365 + Math.floor((tmp - 1921) / 4)
+                    + madd[TheDate.getMonth()] + TheDate.getDate() - 38;
+            if (TheDate.getYear() % 4 == 0 && TheDate.getMonth() > 1) {
+                total++;
+            }
+            for (m = 0;; m++) {
+                k = (CalendarData[m] < 0xfff) ? 11 : 12;
+                for (n = k; n >= 0; n--) {
+                    if (total <= 29 + GetBit(CalendarData[m], n)) {
+                        isEnd = true;
+                        break;
+                    }
+                    total = total - 29 - GetBit(CalendarData[m], n);
+                }
+                if (isEnd)
+                    break;
+            }
+            cYear = 1921 + m;
+            cMonth = k - n + 1;
+            cDay = total;
+            if (k == 12) {
+                if (cMonth == Math.floor(CalendarData[m] / 0x10000) + 1) {
+                    cMonth = 1 - cMonth;
+                }
+                if (cMonth > Math.floor(CalendarData[m] / 0x10000) + 1) {
+                    cMonth--;
+                }
+            }
+        }
+        function GetcDateString() {
+            var tmp = "";
+            
+            tmp += "农历";
+            if (cMonth < 1) {
+                tmp += "(闰)";
+                tmp += monString.charAt(-cMonth - 1);
+            } else {
+                tmp += monString.charAt(cMonth - 1);
+            }
+            tmp += "月";
+            tmp += (cDay < 11) ? "初" : ((cDay < 20) ? "十" : ((cDay < 30) ? "廿十"
+                    : "三十"));
+            if (cDay % 10 != 0 || cDay == 10) {
+                tmp += numString.charAt((cDay - 1) % 10);
+            }
+            return tmp;
+        }
+        function GetLunarDay(solarYear, solarMonth, solarDay) {
+            if (solarYear<1921 || solarYear>2020) {
+                return "";
+            } else {
+                solarMonth = (parseInt(solarMonth) > 0) ? (solarMonth - 1) : 11;
+                e2c(solarYear, solarMonth, solarDay);
+                return GetcDateString();
+            }
+        }
+        var D = new Date();
+        var yy = D.getFullYear();
+        var mm = D.getMonth() + 1;
+        var dd = D.getDate();
+        var ww = D.getDay();
+        var ss = parseInt(D.getTime() / 1000);
+        function getFullYear(d) {// 修正firefox下year错误
+            yr = d.getYear();
+            if (yr < 1000)
+                yr += 1900;
+            return yr;
+        }
+        function showDate() {
+            var sValue = getFullYear(dNow) + "年" + (dNow.getMonth() + 1) + "月"
+                    + dNow.getDate() + "日<br/>" + " " + sWeek[dNow.getDay()] + " ";
+            sValue += GetLunarDay(yy, mm, dd);
+            document.getElementById("pDate").innerHTML = sValue;
+        };
+        window.onload = showDate;
+    </script>
+    
+    <iframe allowtransparency="true" frameborder="0" width="750" height="80" scrolling="no" src="http://tianqi.2345.com/plugin/widget/index.htm?s=1&z=3&t=1&v=0&d=4&bd=0&k=&f=ffffff&q=1&e=0&a=1&c=58238&w=255&h=98&align=left" style="float:right; position:relative; z-index:3;"></iframe>
+
+</div>
+
+<div class="nindex_top nindex_top_fix"></div>
+<div class="nindex_video">
+
+    <video id="video" controls autoplay poster="images/bj.jpg"></video>
+    
+
+</div>
+
+
+<!--<div class="nindex_banner01 shopping_fun" id="shopping_fun">
+<img src="images/index_03.jpg" >
+</div>-->
+
+<div class="nindex_banner02">
+	<div class="swiper-container">
+        <div class="swiper-wrapper" id="ajax_banner">
+            <div class="swiper-slide"><img src="images/index_06.jpg" ></div>
+            <div class="swiper-slide"><img src="images/index_07.jpg" ></div>
+            <div class="swiper-slide"><img src="images/index_06.jpg" ></div>
+            <div class="swiper-slide"><img src="images/index_07.jpg" ></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+</div>
+
+<div class="nindex_box">
+<img src="images/index_08_2.jpg" class="nindex_box01 category_fun" data-id="3811" data-tid="3812" category_floor="2">
+<img src="images/index_10_2.jpg" class="nindex_box02 category_fun" data-id="3823" data-tid="3831" category_floor="2">
+<img src="images/index_12_2.jpg" class="nindex_box03 category_fun" data-id="3827" data-tid="3870" category_floor="2">
+<img src="images/index_15_2.jpg" class="nindex_box04 category_fun" data-id="3826" data-tid="3864" category_floor="2">
+<img src="images/index_16_2.jpg" class="nindex_box05 category_fun" data-id="3826" data-tid="3865" category_floor="2">
+</div>
+
+<div class="nindex_foot">
+<div class="sdm">
+
+
+
+
+
+</div>
+
+<img src="images/f5.jpg" class="nindex_ka service_card_fun" >
+
+</div>
+
+
+</div>
+<!--zepto框架-->
+<script src="js/zepto.min.js"></script>
+<!--插件-->
+<script src="js/plus/fx.js"></script>
+<script src="js/plus/ajax.js"></script>
+<script src="js/plus/swiper.jquery.min.js"></script>
+
+
+<!--数据-->
+<script src="js/base.js"></script>
+
+<script src="js/huiyin/common/url.js"></script>
+<script src="js/native.js"></script>
+<script src="js/huiyin/http/index_2.js"></script>
+
+<script language="javascript">
+	function onResume(){
+		document.getElementById("video").play();
+	}
+	function onStop(){
+		document.getElementById("video").pause();
+	}
+	
+$(document).ready(function(e) {
+	
+    $("#video").click(function(){
+		document.getElementById("video").controls=false;
+	})
+	
+	$("#baidu").removeAttr("href");
+		$('.nindex_top').bind('click', function() {
+		$(this).unbind('click');
+	});
+
+});
+
+
+</script>
+
+
+</body>
+</html>

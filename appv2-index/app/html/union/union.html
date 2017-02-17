@@ -1,0 +1,88 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>汇银乐虎 联盟商户积分兑换商家平台</title>
+    <meta name="description" content="">
+    <meta name="Keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <link href="../common/css/common.css" rel="stylesheet">
+    <link href="css/union.css" rel="stylesheet">
+    <script src="../common/js/zepto.min.js"></script>
+    <script src="js/coupons.js"></script>
+</head>
+</head>
+<body class="union_bj">
+<div class="nwrapper">
+    <!--顶部-->
+    <header class="header">
+        <a href="javascript:;" class="back"></a>
+        <h2>联盟商户积分兑换专区</h2>
+    </header>
+
+    <!--中间-->
+         <!--洗车券-->
+         <div class="union_coupon">
+             <div class="union_coupon_car">
+                 <img src="img/car_03.jpg">
+             </div>
+             <div class="union_coupon_title">
+                 <span class="coupon_title_name">洗车券</span>
+                 <span class="coupon_title_fuwu">提供单次洗车服务，提供单次洗车服务，提供单次洗车服务，提供单次洗车服务，提供单次洗车服务，提供单次洗车服务，提供单次洗车服务，提供单次洗车服务，提供单次洗车服务，</span>
+                 <span class="coupon_title_carname">小陆洗车行</span>
+                 <span class="coupon_title_val">2000积分</span>
+             </div>
+         </div>
+
+         <!--积分兑换-->
+         <div class="union">
+             <div class="union_integral">
+                 当前会员积分余额&nbsp;:&nbsp;<span class="union_integral_val">0</span>分
+             </div>
+             <div class="union_card">
+                 <input type="text" placeholder="请输入乐享会员卡卡号查询积分"><span class="union_card_fc">确定</span>
+             </div>
+             <div class="union_ph">
+                 <input type="text" placeholder="短信验证码"><button type="button" class="union_ph_mes">获取短信验证码</button>
+             </div>
+             <button type="button" class="union_exchange">确定兑换</button>
+         </div>
+    <!--中间-->
+</div>
+
+<!--顶部-->
+<div class="footer">
+    下载乐虎全球家APP，享更多优惠
+</div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.union_ph_mes').click(function(){
+            var that = this;
+            console.log(2);
+            $(that).attr("disabled","true").css("color","#999999");
+            $(that).html("60秒后重新获取");
+
+            timer = setInterval(function(){
+                var COUNT = parseInt($(that).html());
+                COUNT = COUNT -1;
+                $(that).html(COUNT + "秒后重新获取");
+                console.log(COUNT);
+                if(COUNT == 0 ){
+                    clearInterval(timer);
+                    $(that).removeAttr("disabled").html("点击获取验证码").css("color","#f5174b");
+
+                }
+            },1000)
+
+        });
+        $('.union_exchange').click(function(){
+            console.log(2);
+            $(this).attr("disabled","true").css("color","#999999")
+        })
+    });
+</script>
+</html>

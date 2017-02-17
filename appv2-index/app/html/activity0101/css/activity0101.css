@@ -1,0 +1,97 @@
+body {
+	background: url(../img/body_background.jpg) repeat;
+}
+
+.activity_top,
+.activity_msg {
+	width: 100%;
+	height: auto
+}
+
+.activity_msg ul {
+	width: 100%;
+	height:2.86rem;
+	background: rgba(217,48,55,1);
+}
+
+.activity_msg ul li {
+	float: left;
+	height: 100%;
+}
+
+.activity_msg ul li:nth-of-type(1) {
+	width: 2.51rem;
+	 
+}
+
+.activity_msg ul li:nth-of-type(2) {
+	width: 2.4rem;
+	 
+}
+
+.activity_msg ul li:nth-of-type(3) {
+	width: 2.59rem;
+	 
+}
+
+.activity_msg>ul>li>img{
+	width: 100%;
+	height:100%;
+}
+
+.activity_box,
+.activity_box_top,
+.activity_box>a>img{
+	width: 100%;
+	height: auto;
+	display: block;
+	float: left;
+}
+
+.activity_rule {
+	position: relative
+}
+
+.activity_rule a {
+	width: 24%;
+	height: .42rem;
+	position: absolute;
+	display: block;
+	top: 11.82rem;
+	left: 37%
+}
+
+.activity_box{
+	padding-bottom: .2rem;
+}
+
+.activity_box a:nth-of-type(1),
+.activity_box a:nth-of-type(2){
+	width: 48.5%;
+	height: auto;
+	display: block;
+	float: left;
+	margin: 0 0 0 1%;
+}
+
+.activity_box a{
+	width: 48.5%;
+	height: auto;
+	display: block;
+	float: left;
+	margin: .1rem 0 0 1%;
+}
+
+.foot{
+ 	float: left;
+	width: 100%;
+	height: 2.03rem;
+}
+.foot img{
+	width:100%;
+	height:100%;
+	margin: none;
+	margin: 0;
+}
+ 
+ 
